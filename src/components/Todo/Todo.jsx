@@ -1,7 +1,12 @@
 import React from "react";
 
-const Todo = () => {
-  return <div>Todo</div>;
+const Todo = ({ todo }) => {
+  const { text, status } = todo;
+  return (
+    <li>
+      <label htmlFor="checkbox">{text}</label>
+    </li>
+  );
 };
 
 export default Todo;
