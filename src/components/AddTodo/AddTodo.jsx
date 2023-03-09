@@ -8,14 +8,16 @@ const AddTodo = ({ onAdd }) => {
     setText(e.target.value);
   };
 
-  const hadleSubmit = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    if (text.trim().length === 0) return;
     onAdd({ id: uuidv4(), text, status: "active" });
     setText("");
   };
+
   return (
     <div>
-      <form onSubmit={hadleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Add Todo"
