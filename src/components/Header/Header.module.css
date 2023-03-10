@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: var(--color-bg-dark);
-  border-bottom: 1px soild var(--color-grey);
+  border-bottom: 1px solid var(--color-grey);
 }
 
 .filters {
@@ -13,4 +13,21 @@
 .filter {
   margin:0.3rem;
   background-color: transparent;
+  font-size: 1.4rem;
+  font-weight: bold;
+  opacity: 0.8;
+  color:var(--color-accent)
+}
+
+.filter:hover ,
+.filter.selected {
+  opacity :1;
+  cursor: pointer;
+}
+
+.filter.selected::after {
+  content: "";
+  display: block;
+  margin-top: 0.2rem;
+  border:1px solid var(--color-text)
 }
