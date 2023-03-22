@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Header from "./components/Header/Header";
+import TodoList from "./components/TodoList/TodoList";
+import DarkModeProvider from "./context/DarkModeContext";
+
+//filters에는 전체, 작업중, 완료 상태를 보여줄거다
+const filters = ["all", "active", "completed"];
 
 function App() {
+  //filter라는 상태를 이용하여 첫번째 초기값은 filters안에 있는 all을 보여주겠다
+  const [filter, setFilter] = useState(filters[0]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <DarkModeProvider>
+      {/* Header에 전체 필터, 선택된 필터, 필터가 변경이 되었을때
+      호출해야하는것까지 전달해줘야함 */}
+      {/* 
+      1. Header야 우리가 사용할 필터들은 fliters야 
+      2. 현재 선택된 filter는 상태값 filter야
+      3. 만약에 onFilter가 변경이 되면 변경된 filter를 받아서 변경해줄거야
+      */}
+      <Header filters={filters} filter={filter} onFiltereChange={setFilter} />
+      {/* 변경된 filter는 이거야! 라고 todolist에 말해줘야함 */}
+      <TodoList filter={filter} />
+    </DarkModeProvider>
   );
 }
 
