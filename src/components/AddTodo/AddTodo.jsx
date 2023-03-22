@@ -11,9 +11,13 @@ const AddTodo = ({ onAdd }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     if (text.trim().length === 0) {
       return;
     }
+=======
+    if (text.trim().length === 0) return;
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
     onAdd({ id: uuidv4(), text, status: "active" });
     setText("");
   };

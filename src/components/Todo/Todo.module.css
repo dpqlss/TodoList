@@ -8,14 +8,23 @@
 }
 
 .checkbox {
+<<<<<<< HEAD
   width: 1.2rem;
   height: 1.2rem;
+=======
+  width: 1.5rem;
+  height: 1.5rem;
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
 }
 
 .text {
   flex: 1 1 0%;
   margin-left: 0.5rem;
+<<<<<<< HEAD
   font-size: 1.2rem;
+=======
+  font-size: 1.5rem;
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
 }
 
 .icon {
@@ -32,12 +41,18 @@
 }
 
 .button {
+<<<<<<< HEAD
   cursor: pointer;
+=======
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
   color: var(--color-text);
   background-color: transparent;
 }
 
+<<<<<<< HEAD
 .button:hover {
   color:var(--color-white);
 }
 
+=======
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7

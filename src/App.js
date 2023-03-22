@@ -4,6 +4,7 @@ import Header from "./components/Header/Header";
 import TodoList from "./components/TodoList/TodoList";
 import DarkModeProvider from "./context/DarkModeContext";
 
+<<<<<<< HEAD
 //filters에는 전체, 작업중, 완료 상태를 보여줄거다
 const filters = ["all", "active", "completed"];
 
@@ -21,6 +22,15 @@ function App() {
       */}
       <Header filters={filters} filter={filter} onFiltereChange={setFilter} />
       {/* 변경된 filter는 이거야! 라고 todolist에 말해줘야함 */}
+=======
+const filters = ["all", "active", "completed"];
+
+function App() {
+  const [filter, setFilter] = useState(filters[0]);
+  return (
+    <DarkModeProvider>
+      <Header filters={filters} filter={filter} onFiltereChange={setFilter} />
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
       <TodoList filter={filter} />
     </DarkModeProvider>
   );

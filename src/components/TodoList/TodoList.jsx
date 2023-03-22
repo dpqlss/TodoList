@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from "react";
 import AddTodo from "../AddTodo/AddTodo";
 import Todo from "../Todo/Todo";
@@ -14,6 +15,17 @@ const TodoList = ({ filter }) => {
 
   const handleAdd = (todo) => {
     // 새로운 todo를 todos에 추가 해야 함
+=======
+import React, { useState } from "react";
+import Todo from "../Todo/Todo";
+import AddTodo from "../AddTodo/AddTodo";
+import styles from "./TodoList.module.css";
+
+const TodoList = ({ filter }) => {
+  const [todos, setTodos] = useState(ListItem);
+
+  const handleAdd = (todo) => {
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
     setTodos([...todos, todo]);
   };
 
@@ -21,6 +33,7 @@ const TodoList = ({ filter }) => {
     setTodos(todos.map((t) => (t.id === updated.id ? updated : t)));
   };
 
+<<<<<<< HEAD
   const handleDelet = (deleted) => {
     //삭제하고자 하는것이 아닌것만 배열로 나타내라
     setTodos(todos.filter((t) => t.id !== deleted.id));
@@ -39,6 +52,13 @@ const TodoList = ({ filter }) => {
   //filter 된 아이템만 받아와서 기존 todo와 필터에 해당하는 것만
   //필터에 전달해줘서 필터를 받아올 수 있게 할거임
   const filtered = getFilteredItems(todos, filter);
+=======
+  const handleDelete = (deleted) => {
+    setTodos(todos.filter((t) => t.id !== deleted.id));
+  };
+
+  const filtered = getFilterItem(todos, filter);
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
 
   return (
     <section className={styles.container}>
@@ -48,16 +68,24 @@ const TodoList = ({ filter }) => {
             key={item.id}
             todo={item}
             onUpdate={handleUpdate}
+<<<<<<< HEAD
             onDelete={handleDelet}
           />
         ))}
       </ul>
       {/* onAdd가 되면 나의 callback함수인 handleAdd 호출해줘  */}
+=======
+            onDelete={handleDelete}
+          />
+        ))}
+      </ul>
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
       <AddTodo onAdd={handleAdd} />
     </section>
   );
 };
 
+<<<<<<< HEAD
 //getFilteredItems 함수는 현재 todo배열과 어떤 것을
 //필터 적용해야하는지 데이터를 받아옴
 const getFilteredItems = (todos, filter) => {
@@ -66,11 +94,18 @@ const getFilteredItems = (todos, filter) => {
   }
   // 만약 filter가 all 아니면 기존 todos의 filter를 이용하여
   // 각각 todo를 받아와서 todo의 상태가 filter에 해당하는것만 보여줘라
+=======
+const getFilterItem = (todos, filter) => {
+  if (filter === "all") {
+    return todos;
+  }
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
   return todos.filter((todo) => todo.status === filter);
 };
 
 export default TodoList;
 
+<<<<<<< HEAD
 const readTodosFromLocalStorage = () => {
   console.log("readTodosFromLocalStorage 함수 실행");
   const todos = localStorage.getItem("todos");
@@ -91,3 +126,17 @@ const readTodosFromLocalStorage = () => {
 //     status: "active",
 //   },
 // ];
+=======
+const ListItem = [
+  {
+    id: 1,
+    text: "잠자기",
+    status: "active",
+  },
+  {
+    id: 2,
+    text: "놀기",
+    status: "active",
+  },
+];
+>>>>>>> e9000dd6b6699c94ebf93d552a3393a502a949f7
