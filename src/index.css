@@ -7,7 +7,7 @@
   --color-bg: #fdfdfd;
   --color-grey: #d1d1d1;
   --color-text: #22243b;
-  --color-accent: #0fbab9;
+  --color-accent: #0ac48d;
   --color-white: white;
   --color-scrollbar : #aaa7a7
 }
@@ -33,11 +33,11 @@ body {
   align-items: center;
   font-size: 1.2rem;
   accent-color: var(--color-accent);
-  background: rgb(81,87,111);
+  background: rgb(249,247,244);
   background: linear-gradient(
   105deg, 
-  rgba(81,87,111,1) 0%, 
-  rgba(60,61,69,1) 100%);
+  rgba(249,247,244,1) 20%, 
+  rgba(237,231,223,1) 100%);
 }
 
 #root {
@@ -49,8 +49,8 @@ body {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.45);
-  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.45);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.30);
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.30);
 }
 
 code {

@@ -18,6 +18,10 @@
   font-size: 1.2rem;
 }
 
+.checked{
+  text-decoration-line: line-through;
+}
+
 .icon {
   width: 26px;
   height: 26px;
