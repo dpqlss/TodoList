@@ -18,7 +18,7 @@ const Todo = ({ todo, onUpdate, onDelete }) => {
       <input
         className={styles.checkbox}
         type="checkbox"
-        id="checkbox"
+        id={id}
         checked={status === "completed"}
         onChange={handleUpdate}
       />
