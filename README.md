@@ -1,4 +1,4 @@
-<img width="1434" alt="스크린샷 2023-03-28 오후 3 48 38" src="https://user-images.githubusercontent.com/105622173/228719011-3341b104-6f9a-451d-9f66-944eab13e7e8.png">
+![Mar-30-2023 12-15-25](https://user-images.githubusercontent.com/105622173/228719451-1d4d5846-0f6d-49e2-bb38-626192fbadd1.gif)
 
 <p>
   간단히 할 일을 추가할 수 있는 TodoList
